@@ -10,6 +10,7 @@ def grid_values(grid):
         - keys: Box labels, e.g. 'A1'
         - values: Value in corresponding box, e.g. '8', or '.' if it is empty.
     """
+<<<<<<< HEAD
     elements = []
     notDeterminedBoxValue = '123456789'
     for c in grid:
@@ -18,3 +19,6 @@ def grid_values(grid):
         elif c in notDeterminedBoxValue:
             elements.append(c)
     return dict(zip(boxes, elements))
+=======
+    return dict(zip(boxes, grid))
+>>>>>>> branch 'master' of https://github.com/HajimeK/aind_sudoku.git
