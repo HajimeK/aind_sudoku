@@ -10,4 +10,11 @@ def grid_values(grid):
         - keys: Box labels, e.g. 'A1'
         - values: Value in corresponding box, e.g. '8', or '.' if it is empty.
     """
-    return dict(zip(boxes, grid))
+    elements = []
+    notDeterminedBoxValue = '123456789'
+    for c in grid:
+        if c == '.':
+            elements.append(notDeterminedBoxValue)
+        elif c in notDeterminedBoxValue:
+            elements.append(c)
+    return dict(zip(boxes, elements))
